@@ -47,7 +47,8 @@ function! s:HL(group, fg, ...)
   execute join(l:histring, ' ')
 endfunction
 
-let s:bg      = ['#fbf1c7', 0]
+" let s:bg      = ['#fbf1c7', 0]
+let s:bg      = ['#fefaf3', 0]
 " let s:bg = ['#ffffea', 0]
 let s:fg      = ['#3c3836', 0]
 let s:comment = ['#928374', 0]
