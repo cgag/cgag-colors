@@ -1,4 +1,5 @@
 " from gruvbox
+
 let s:none = ['NONE', 'NONE']
 function! s:HL(group, fg, ...)
   " arguments: group, guifg, guibg, gui, guisp
@@ -34,17 +35,17 @@ function! s:HL(group, fg, ...)
   execute join(l:histring, ' ')
 endfunction
 
-let s:bg      = ['#2a282a', 0]
+let s:bg        = ['#2a282a', 0]
 " maybe a little too bright yellow
-let s:fg      = ['#b7a894', 0]
-let s:comment = ['#dadc40', 0]
+let s:fg        = ['#b7a894', 0]
+let s:comment   = ['#dadc40', 0]
 " too bright white
-let s:keyword = ['#edf4f8', 0]
-let s:type    = ['#89be86', 0]
+let s:keyword   = ['#edf4f8', 0]
+let s:type      = ['#89be86', 0]
 let s:statement = ['#89be86',0]
-let s:literal = ['#72bda5',0]
+let s:literal   = ['#72bda5',0]
 " a little too dark
-let s:string = ['#b3b0b2',0]
+let s:string    = ['#b3b0b2',0]
 
 let s:bg2        = ['#d5c4a1', 0]
 let s:bg4        = ['#a89984', 0]
@@ -68,6 +69,8 @@ call s:HL('Keyword', s:keyword)
 call s:HL('Type',    s:type)
 call s:HL('Literal', s:literal)
 call s:HL('Constant', s:literal)
+" nerdtree folders
+call s:HL('Directory', s:type)
 
 call s:HL('Visual',       s:none,  s:bg3, s:invert_selection)
 call s:HL('StatusLine',   s:bg4, s:bg, s:bold . s:inverse)
@@ -80,8 +83,8 @@ call s:HL('Repeat',  s:keyword)
 call s:HL('Statement',    s:statement)
 
 hi! link goDeclaration Keyword
-" hi! link goStatement DarkRed
-" hi! link goLabel DarkRed
+hi! link goStatement Statement
+hi! link goLabel Keyword
 hi! link goDecimalInt Literal
 hi! link goMethodCall Normal
 hi! link goBlock Blue
