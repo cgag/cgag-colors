@@ -84,6 +84,7 @@ call s:HL('Statement',    s:statement)
 
 hi! link goDeclaration Keyword
 hi! link goStatement Statement
+hi! link goFunctionCall Normal
 hi! link goLabel Keyword
 hi! link goDecimalInt Literal
 hi! link goMethodCall Normal
