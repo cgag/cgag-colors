@@ -21,18 +21,6 @@ function! s:HL(group, fg, ...)
     let l:emstr = 'none,'
   endif
 
-  " special fallback
-  " if a:0 >= 3
-  "   if g:gruvbox_guisp_fallback !=# 'none'
-  "     let l:fg = a:3
-  "   endif
-
-  "   " bg fallback mode should invert higlighting
-  "   if g:gruvbox_guisp_fallback ==# 'bg'
-  "     let l:emstr .= 'inverse,'
-  "   endif
-  " endif
-
   let l:histring = [ 'hi', a:group,
         \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
         \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
@@ -47,9 +35,7 @@ function! s:HL(group, fg, ...)
   execute join(l:histring, ' ')
 endfunction
 
-" let s:bg      = ['#fbf1c7', 0]
 let s:bg      = ['#fefaf3', 0]
-" let s:bg = ['#ffffea', 0]
 let s:fg      = ['#3c3836', 0]
 let s:comment = ['#928374', 0]
 let s:green   = ['#468966', 0]
@@ -58,12 +44,12 @@ let s:red     = ['#b64926', 0]
 let s:darkred = ['#8e2800', 0]
 let s:yellow  = ['#fff0a5', 0]
 
-let s:bg2        = ['#d5c4a1', 0]     " 213-196-161
-let s:bg4        = ['#a89984', 0]     " 168-153-132
-let s:fg4        = ['#7c6f64', 0]     " 124-111-100
-let s:bg3        = ['#bdae93', 0]     " 189-174-147
-let s:faded_aqua = ['#427b58', 66]      " 66-123-88
-let s:faded_blue = ['#076678', 24]      " 7-102-120
+let s:bg2        = ['#d5c4a1', 0]
+let s:bg4        = ['#a89984', 0]
+let s:fg4        = ['#7c6f64', 0]
+let s:bg3        = ['#bdae93', 0]
+let s:faded_aqua = ['#427b58', 66]
+let s:faded_blue = ['#076678', 24]
 let s:bold    = 'bold,'
 let s:inverse = 'inverse,'
 let s:invert_selection = s:inverse
@@ -74,13 +60,12 @@ call s:HL('Aqua', s:faded_aqua)
 call s:HL('Blue', s:faded_blue)
 
 call s:HL('Cursor', s:none, s:none, s:inverse)
-" Visual mode cursor, selection
 
+" Visual mode cursor, selection
 hi! link vCursor Cursor
 call s:HL('Normal',       s:fg, s:bg)
 call s:HL('Comment',      s:comment, s:none)
 call s:HL('String',       s:green)
-" call s:HL('String',       s:faded_blue)
 
 call s:HL('Visual',       s:none,  s:bg3, s:invert_selection)
 call s:HL('StatusLine',   s:bg4, s:bg, s:bold . s:inverse)
@@ -97,7 +82,7 @@ hi! link goDeclaration DarkRed
 hi! link goStatement DarkRed
 hi! link goLabel DarkRed
 hi! link goDecimalInt Blue
-hi! link goMethodCall Blue
+hi! link goMethodCall Normal
 hi! link goBlock Blue
 
 hi! link jsStatement DarkRed
