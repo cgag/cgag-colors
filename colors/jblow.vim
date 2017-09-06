@@ -103,7 +103,7 @@ hi! link goBlock Blue
 " hi! link goPredefinedIdentifiers Blue
 " call s:HL('WildMenu', s:faded_blue, s:bg2, s:bold)
 " Popup menu: normal item
-call s:HL('Pmenu', s:fg, s:bg2)
+call s:HL('Pmenu', s:bg, s:fg)
 " Popup menu: selected item
 call s:HL('PmenuSel', s:bg2, s:faded_blue, s:bold)
 " Popup menu: scrollbar
