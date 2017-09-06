@@ -86,6 +86,8 @@ call s:HL('Repeat',  s:keyword)
 call s:HL('Statement',    s:statement)
 
 hi! link goDeclaration Keyword
+hi! link goDeclType Keyword
+hi! link goConst Keyword
 hi! link goStatement Statement
 hi! link goFunctionCall Normal
 hi! link goLabel Keyword
