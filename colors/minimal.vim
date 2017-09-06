@@ -81,9 +81,12 @@ call s:HL('Statement',    s:darkred)
 hi! link goDeclaration DarkRed
 hi! link goStatement DarkRed
 hi! link goLabel DarkRed
+hi! link goDeclType DarkRed
+hi! link goConst DarkRed
 hi! link goDecimalInt Blue
 hi! link goMethodCall Normal
 hi! link goBlock Blue
+hi! link goVar DarkRed
 
 hi! link jsStatement DarkRed
 hi! link jsArrowFunction DarkRed

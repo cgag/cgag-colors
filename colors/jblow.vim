@@ -40,12 +40,14 @@ let s:bg        = ['#2a282a', 0]
 let s:fg        = ['#b7a894', 0]
 let s:comment   = ['#dadc40', 0]
 " too bright white
-let s:keyword   = ['#edf4f8', 0]
+" let s:keyword   = ['#edf4f8', 0]
+let s:keyword   = ['#e0e3e4', 0]
 let s:type      = ['#89be86', 0]
 let s:statement = ['#89be86',0]
 let s:literal   = ['#72bda5',0]
 " a little too dark
-let s:string    = ['#b3b0b2',0]
+" let s:string    = ['#b3b0b2',0]
+let s:string    = ['#bbb7ba',0]
 
 let s:bg2        = ['#d5c4a1', 0]
 let s:bg4        = ['#a89984', 0]
@@ -53,6 +55,7 @@ let s:fg4        = ['#7c6f64', 0]
 let s:bg3        = ['#bdae93', 0]
 let s:faded_aqua = ['#427b58', 66]
 let s:faded_blue = ['#076678', 24]
+
 let s:bold    = 'bold,'
 let s:inverse = 'inverse,'
 let s:invert_selection = s:inverse
