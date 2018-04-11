@@ -72,6 +72,9 @@ call s:HL('Keyword', s:keyword)
 call s:HL('Type',    s:type)
 call s:HL('Literal', s:literal)
 call s:HL('Constant', s:literal)
+" TODO(cgag): maybe delete
+call s:HL('Identifier', s:literal)
+
 " nerdtree folders
 call s:HL('Directory', s:type)
 
@@ -93,7 +96,8 @@ hi! link goFunctionCall Normal
 hi! link goLabel Keyword
 hi! link goDecimalInt Literal
 hi! link goMethodCall Normal
-hi! link goBlock Blue
+" hi! link goBlock Blue
+hi! link goField Normal
 
 " hi! link jsStatement DarkRed
 " hi! link jsArrowFunction DarkRed

@@ -47,7 +47,8 @@ let s:statement = ['#89be86',0]
 let s:literal   = ['#72bda5',0]
 " a little too dark
 " let s:string    = ['#b3b0b2',0]
-let s:string    = ['#2e9e8f',0]
+let s:string    = ['#32a193',0]
+
 
 let s:bg2        = ['#d5c4a1', 0]
 let s:bg4        = ['#a89984', 0]
