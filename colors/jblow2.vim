@@ -1,5 +1,12 @@
 " from gruvbox
 
+highlight clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name="jblow2"
+
 let s:none = ['NONE', 'NONE']
 function! s:HL(group, fg, ...)
   " arguments: group, guifg, guibg, gui, guisp
