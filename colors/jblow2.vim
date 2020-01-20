@@ -88,10 +88,16 @@ call s:HL('StatusLine',   s:bg4, s:bg, s:bold . s:inverse)
 call s:HL('StatusLineNC', s:bg2, s:fg4, s:bold . s:inverse)
 call s:HL('MatchParen',   s:none, s:bg3, s:bold . s:inverse)
 
-call s:HL('Conditional',  s:keyword)
+call s:HL('Special',      s:keyword)
+
+" call s:HL('Conditional',  s:keyword)
 call s:HL('Repeat',  s:keyword)
 
-call s:HL('Statement',    s:statement)
+" call s:HL('Statement',    s:statement)
+
+hi! link typescriptGlobal Keyword
+hi! link typescriptBomWindowMethod Keyword
+hi! link typescriptDomFormProp Normal
 
 hi! link goDeclaration Keyword
 hi! link goDeclType Keyword
@@ -102,6 +108,11 @@ hi! link goLabel Keyword
 hi! link goDecimalInt Literal
 hi! link goMethodCall Normal
 hi! link goBlock Blue
+
+hi! link typescriptObjectLabel Normal
+hi! link typescriptArraymethod Normal
+
+hi! link Statement Normal
 
 " hi! link jsStatement DarkRed
 " hi! link jsArrowFunction DarkRed
@@ -140,7 +151,6 @@ call s:HL('NonText',      s:none)
 call s:HL('PreProc',      s:none)
 call s:HL('Question',     s:none)
 call s:HL('Search',       s:none)
-call s:HL('Special',      s:none)
 call s:HL('SpecialKey',   s:none)
 call s:HL('Title',        s:none)
 call s:HL('Todo	',        s:none)
