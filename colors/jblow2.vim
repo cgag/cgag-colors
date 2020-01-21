@@ -42,7 +42,8 @@ function! s:HL(group, fg, ...)
   execute join(l:histring, ' ')
 endfunction
 
-let s:bg        = ['#032226', 0]
+" let s:bg        = ['#032226', 0]
+let s:bg        = ['#042629', 0]
 let s:fg        = ['#b7a894', 0]
 let s:comment   = ['#43a73f', 0]
 " let s:comment   = ['#148b7b', 0]
@@ -111,6 +112,8 @@ hi! link goBlock Blue
 
 hi! link typescriptObjectLabel Normal
 hi! link typescriptArraymethod Normal
+hi! link typescriptGlobal Normal
+hi! link typescriptHeadersMethod Normal
 
 hi! link Statement Normal
 
