@@ -20,7 +20,7 @@ endif
 
 let g:colors_name='cgag-plain'
 
-let s:brown           = { "gui": "#b7a894", "cterm": "12"   }
+let s:brown           = { "gui": "#a39077", "cterm": "12"   }
 " let s:brown           = { "gui": "#bab0a2", "cterm": "12"   }
 let s:black           = { "gui": "#242323", "cterm": "0"   }
 
