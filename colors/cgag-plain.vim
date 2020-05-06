@@ -20,9 +20,11 @@ endif
 
 let g:colors_name='cgag-plain'
 
+let s:brown           = { "gui": "#9c886e", "cterm": "12"   }
 let s:brown           = { "gui": "#a39077", "cterm": "12"   }
 " let s:brown           = { "gui": "#bab0a2", "cterm": "12"   }
 let s:black           = { "gui": "#242323", "cterm": "0"   }
+" let s:black     = { "gui": "#2b2a2a", "cterm": "2"  }
 
 " let s:black           = { "gui": "#222222", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "8" }
@@ -45,7 +47,9 @@ let s:light_blue      = { "gui": "#B6D6FD", "cterm": "4" }
 let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
 let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "6"  }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "2"  }
+" let s:light_green     = { "gui": "#5FD7A7", "cterm": "2"  }
+let s:light_green     = { "gui": "#549666", "cterm": "2"  }
+" let s:light_green     = { "gui": "#7d618f", "cterm": "2"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "5"  }
 let s:light_yellow    = { "gui": "#F3E430", "cterm": "3"  }
@@ -124,6 +128,10 @@ hi! link Identifier       Normal
 
 "hi! link Statement        Normal
 call s:h("Statement",     {"bg": s:bg, "fg": s:norm, "cterm": "bold"})
+
+" call s:h("Keyword",     {"bg": s:bg, "fg": s:white, "cterm": "bold"})
+hi! link typescriptTry    Normal
+
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
@@ -145,7 +153,7 @@ hi! link Structure        Type
 hi! link Typedef          Type
 
 "call s:h("Special",       {"fg": s:pink})
-hi! link Special          StatusLine
+hi! link Special          Normal
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -201,8 +209,8 @@ hi link helpHyperTextJump  String
 
 """ StatusLine
 
-call s:h("StatusLine",        {"bg": s:bg, "fg": s:status_line})
-call s:h("StatusLineNC",      {"cterm": "underline", "bg": s:bg, "fg": s:status_line_nc})
+call s:h("StatusLine",        {"bg": s:brown, "fg": s:black})
+call s:h("StatusLineNC",      {"cterm": "underline", "bg": s:light_black, "fg": s:light_gray})
 
 " Those are not standard but are useful to emphasis different parts of the
 " status line.
@@ -222,7 +230,10 @@ call s:h("CursorLine",    {"bg": s:cursor_line})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 call s:h("MatchParen",    {"bg": s:bg_very_subtle, "fg": s:norm})
-call s:h("qfLineNr",      {"fg": s:medium_gray})
+
+" set these to the bg color to make them invisible,  this is just a hack
+" to have some padding.
+call s:h("LineNr",        {"fg": s:bg})
 
 call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
 call s:h("htmlH2",        {"bg": s:bg, "fg": s:norm})

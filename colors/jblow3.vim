@@ -50,9 +50,6 @@ let s:fg        = ['#b7a894', 0]
 
 
 let s:comment   = ['#43a73f', 0]
-" let s:comment   = ['#148b7b', 0]
-" too bright white
-" let s:keyword   = ['#edf4f8', 0]
 let s:keyword   = ['#e0e3e4', 0]
 let s:type      = ['#89be86', 0]
 let s:statement = ['#89be86',0]
@@ -80,11 +77,7 @@ call s:HL('Cursor', s:none, s:none, s:inverse)
 hi! link vCursor Cursor
 call s:HL('Normal',  s:fg, s:bg)
 call s:HL('Comment', s:comment, s:none)
-call s:HL('String',  s:string)
-call s:HL('Keyword', s:keyword)
-call s:HL('Type',    s:type)
-call s:HL('Literal', s:literal)
-call s:HL('Constant', s:literal)
+call s:HL('String',  s:fg, s:bg)
 " nerdtree folders
 call s:HL('Directory', s:type)
 
@@ -99,6 +92,11 @@ call s:HL('Special',      s:keyword)
 call s:HL('Repeat',  s:keyword)
 
 " call s:HL('Statement',    s:statement)
+"
+hi! link Type Normal
+hi! link Special Normal
+hi! link Repeat Normal
+hi! link Constant Normal
 
 hi! link typescriptGlobal Keyword
 hi! link typescriptBomWindowMethod Keyword

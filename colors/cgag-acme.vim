@@ -46,4 +46,4 @@ highlight! goKeyword guibg=bg guifg=fg ctermbg=bg ctermfg=fg
 highlight! goLabel guibg=bg guifg=fg ctermbg=bg ctermfg=fg
 highlight! goRepeat guibg=bg guifg=fg ctermbg=bg ctermfg=fg
 
-let g:colors_name = "acme"
+let g:colors_name = "cgag-acme"
