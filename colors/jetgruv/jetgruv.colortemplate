@@ -1,0 +1,193 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+
+# Information {{{
+# Mandatory
+Full name:     jetgruv
+Short name:    jetgruv
+Author:        X <test@example.com>
+
+# Prefix for options: short name is used if this key is not present:
+# Option Prefix: dark
+# }}}
+
+# Documentation {{{
+Include: _help.colortemplate
+# }}}
+
+# Common linked groups {{{
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+Boolean           -> Statement
+Character         -> Constant
+Conditional       -> Statement
+Define            -> PreProc
+Debug             -> Special
+Delimiter         -> Special
+Exception         -> Statement
+Float             -> Constant
+Function          -> Identifier
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+Number            -> Constant
+Operator          -> Statement
+PreCondit         -> PreProc
+Repeat            -> Statement
+SpecialChar       -> Special
+SpecialComment    -> Special
+StorageClass      -> Type
+Structure         -> Type
+Tag               -> Special
+# See `:help lCursor`
+lCursor           -> Cursor
+
+
+
+#mine
+Identifier -> Normal
+EndOfBuffer -> Normal
+#goFunctionCall -> Normal
+
+Todo -> Comment
+Directory -> Constant
+
+# }}}
+
+Background: dark
+
+# Color palette {{{
+# Color name         GUI                     Base256     Base16 (optional)
+Color: black         rgb( 57,  71,  89)        ~         Black
+Color: red           rgb(255,   0,   0)        ~         DarkRed
+Color: green         rgb(  0, 255,   0)        ~         DarkGreen
+Color: yellow        rgb(255, 255,   0)        ~         DarkYellow
+Color: blue          rgb(  0,   0, 255)        ~         DarkBlue
+Color: magenta       rgb(255,   0, 255)        ~         DarkMagenta
+Color: cyan          rgb(  0, 255, 255)        ~         DarkCyan
+Color: white         rgb(235, 235, 235)        ~         LightGrey
+Color: brightblack   rgb(210, 210, 210)        ~         DarkGrey
+Color: brightred     rgb(255, 100,   0)        ~         LightRed
+Color: brightgreen   rgb(100, 255,   0)        ~         LightGreen
+Color: brightyellow  rgb(255, 255, 100)        ~         LightYellow
+Color: brightblue    rgb(  0, 100, 255)        ~         LightBlue
+Color: brightmagenta rgb(255, 100, 255)        ~         LightMagenta
+Color: brightcyan    rgb(100, 255, 255)        ~         LightCyan
+
+Color: light_black #424242 ~
+Color: light_gray #999999 ~
+# Color: normal    #A29581 ~
+
+Color: background #282828  ~
+Color: normal    #83a598 ~
+# Color: normal    #b29873 ~
+Color: keyword    #C7773E ~
+# Color: keyword    #83a598 ~
+Color: background_lighter  #2C2A2A ~
+Color: comment #535753 ~
+Color: string #b8bb26 ~
+Color: constant #d3869b  ~
+Color: goFunction #E6B163 ~
+Color: goOperator #EBDBB2 ~
+# Color: goFunctionCall #C7773E ~
+# Color: goFunctionCall #83a598 ~
+Color: goFunctionCall #b29873 ~
+
+# You may use hexadecimal values, too, and you may provide an explicit base-256 color:
+Color: brightwhite   #e0e0ed                  231        White
+# }}}
+# Terminal colors {{{
+Term colors: black red green yellow blue magenta cyan white
+Term colors: brightblack brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan brightwhite
+# }}}
+
+# Default highlight groups {{{
+Normal           normal        background
+Terminal         white             black
+
+# Group              Foreground        Background        Attributes
+ColorColumn          fg                background
+Conceal              none              none
+Cursor               white             blue
+CursorColumn         white             black
+CursorLine           normal            background_lighter       
+CursorLineNr         white             black
+DiffAdd              white             black             reverse
+DiffChange           white             black             reverse
+DiffDelete           white             black             reverse
+DiffText             white             black             bold,reverse
+ErrorMsg             normal            background             reverse
+FoldColumn           white             none
+Folded               white             none             italic
+IncSearch            white             black             t=reverse g=standout
+LineNr               string             background
+MatchParen           white             normal
+ModeMsg              white             black
+MoreMsg              white             black
+NonText              white             black
+Pmenu                normal            background reverse
+PmenuSbar            white             black
+PmenuSel             normal            light_black
+PmenuThumb           white             black
+Question             white             black
+Search               white             black
+SignColumn           normal            background
+SpecialKey           white             black
+SpellBad             white             black             s=red
+SpellCap             white             black             s=blue
+SpellLocal           white             black             s=magenta
+SpellRare            white             black             s=cyan reverse
+StatusLine           normal            background reverse
+StatusLineNC         light_gray            light_black
+TabLine              white             black
+TabLineFill          white             black
+TabLineSel           white             black
+Title                white             black
+VertSplit            light_black             background
+Visual               white             black
+VisualNOS            white             black
+WarningMsg           white             black
+WildMenu             normal            background
+# Other conventional group names (see `:help group-name`)
+Comment              comment             none              
+String             string             none
+Constant             constant             none
+Literal constant none
+Error                white             black             reverse
+Ignore               white             none
+PreProc              normal             none
+Special              normal             none
+Statement            keyword             none
+# Todo                 white             none
+Type                 keyword             none
+Underlined           white             none
+# See `:help CursorIM`
+CursorIM             none              fg
+# See `:help window-toolbar`
+ToolbarLine          none              black
+ToolbarButton        white             black             bold
+
+goOperator goOperator none
+goType keyword none
+goTypeName goFunction none
+goBuiltins keyword none
+goFunctionCall goFunctionCall none
+goFunction goFunction none
+# }}}
+
+# highlight parens with operator color
+verbatim
+syn match parens /[(){}\[\]]/
+hi parens guifg=#F8E1AA
+
+syn match dotcomma /[\.,:]/
+hi dotcomma guifg=#EBDBB2
+"syn region sname start=/\vtype / end=/ struct/
+"hi sname guifg=#EBDBB2
+endverbatim
+
+# Additional highlight groups {{{
+# Add additional highlight groups here if you want
+# }}}
