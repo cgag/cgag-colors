@@ -179,7 +179,7 @@ goFunction goFunction none
 
 # highlight parens with operator color
 verbatim
-syn match parens /[(){}\[\]]/
+autocmd BufRead,BufNewFile * syn match parens /[(){}\[\]]/
 hi parens guifg=#F8E1AA
 
 syn match dotcomma /[\.,:]/
